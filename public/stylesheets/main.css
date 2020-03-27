@@ -1,0 +1,56 @@
+.thumbnail img {
+    width: 100%;
+}
+.thumbnail {
+    padding: 0;
+}
+.thumbnail .caption-full {
+    padding: 9px;
+}
+
+#link a {
+    color: white;
+    text-decoration: none;
+}
+
+.form_bg {
+    background-color:#eee;
+    color:#666;
+    padding:20px;
+    border-radius:10px;
+    position: absolute;
+    border:1px solid #fff;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 420px;
+    height: 480px;
+}
+.form_bg input {
+    border: none;
+    text-align: center;
+    width: 270px;
+    height: 30px;
+    outline: 1px solid red;
+}
+.form_bg #first {
+    margin-top: 15%;
+}
+.form_bg h2 {
+    font-size: 55px;
+}
+
+#login {
+    margin-top: 30px;
+    width: 180px;
+    border: none;
+    background: rgb(157, 157, 228);
+    color: white;
+    height: 25px;
+}
+
+#tag {
+    margin-top: 70px;
+}

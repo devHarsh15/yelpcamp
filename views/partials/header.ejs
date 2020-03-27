@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="/stylesheets/main.css"/>
+    <title>Yelp Camp</title>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/"><i class="fas fa-campground"></i>YelpCamp</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <% if(!currentUser){ %>
+                        <li><a href="/login"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                        <li><a href="/register"><i class="fas fa-user-plus"></i> Sign Up</a></li>
+                    <% } else{ %>
+                        <li><a href="#"><i class="fas fa-user"></i> Signed in as <strong><%= currentUser.username %></strong></a></li>
+                        <li><a href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    <% } %> 
+                    
+                </ul>
+            </div>
+        </div>
+    </nav> 
+
+    <div class="container">
+        <% if(error && error.length > 0){ %>
+            <div class="alert alert-danger" role="alert"><%= error %> </div>
+        <% } %> 
+        <% if(success && success.length > 0){ %>
+            <div class="alert alert-info" role="alert"><%= success %> </div>
+        <% } %>
+        <% if(deleted && deleted.length > 0){ %>
+            <div class="alert alert-danger" role="alert"><%= deleted %></div>
+        <% } %>
+        <% if(edited && edited.length > 0){ %>
+            <div class="alert alert-warning" role="alert"><%= edited %></div>
+        <% } %>
+        <% if(done && done.length > 0){ %>
+            <div class="alert alert-success" role="alert"><%= done %></div>
+        <% } %>    
+    </div>
+    

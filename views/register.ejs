@@ -1,0 +1,26 @@
+<%- include ("partials/header.ejs") %>
+
+<div class="container">
+    <div class="row">
+        <div class="form_bg">
+            <form action="/register" method="POST">
+                <h2 class="text-center">Register</h2>
+                <br>
+                <div class="form-group text-center">
+                    <input id="first" type="text" name="username" placeholder="username">
+                </div>
+                <div class="form-group text-center">
+                    <input type="password" name="password" placeholder="password">
+                </div>
+                <div class="text-center">
+                    <button id="login">Register</button>
+                </div>
+                <div class="text-center">
+                    <p id="tag">Already have an account, <a href="/login">Log in</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include ("partials/footer.ejs") %>
